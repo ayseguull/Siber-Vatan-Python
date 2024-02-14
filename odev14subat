@@ -1,0 +1,226 @@
+Def emekliliklyasihesapla():
+
+    Emeklilik_yasi = 65
+
+    Yas = int(input(“Yaşınızı giriniz: “))
+
+    
+
+    İf yas < emeklilik_yasi:
+
+        Kalan_yil = emeklilik_yasi – yas
+
+        Print(f”Emekliliğinize {kalan_yil} yıl kaldı.”)
+
+    Elif yas >= emeklilik_yasi:
+
+        Print(“Zaten emekli oldunuz.”)
+
+    Else:
+
+        Print(“Geçersiz yaş girdiniz.”)
+
+Emeklilikyasihesapla()
+
+
+
+“”
+
+
+
+Def asal_sayilari_bul():
+
+    Sayi1 = int(input(“Sayı 1’i giriniz: “))
+
+    Sayi2 = int(input(“Sayı 2’yi giriniz: “))
+
+    Asal_sayilar = []
+
+
+
+    For sayi in range(sayi1, sayi2 + 1):
+
+        İf sayi > 1:
+
+            For i in range(2, sayi):
+
+                İf (sayi % i) == 0:
+
+                    Break
+
+            Else:
+
+                Asal_sayilar.append(sayi)
+
+
+
+    Print(f”İki sayı arasındaki asal sayılar: {‘, ‘.join(map(str, asal_sayilar))}”)
+
+
+
+Asal_sayilari_bul()
+
+“”
+
+Def en_buyuk_sayiyi_bul(liste):
+
+    Return max(liste)
+
+
+
+Def en_kucuk_sayiyi_bul(liste):
+
+    Return min(liste)
+
+
+
+List1 = [10, 15, 20]
+
+List2 = [5, 100, 250]
+
+
+
+En_buyuk = en_buyuk_sayiyi_bul(list1)
+
+En_kucuk = en_kucuk_sayiyi_bul(list2)
+
+
+
+Print(f”{en_buyuk} + {en_kucuk} = {en_buyuk + en_kucuk}”)
+
+
+
+“
+
+
+
+Def ilk_ve_son_sayi_esit_mi(liste):
+
+    İf len(liste) < 1:
+
+        Return False
+
+    Return liste[0] == liste[-1]
+
+
+
+Print(ilk_ve_son_sayi_esit_mi([10, 20, 30, 50]))  # False
+
+Print(ilk_ve_son_sayi_esit_mi([10, 20, 30, 10]))  # True
+
+
+
+“
+
+Def palindrom_sayi_mi(sayi):
+
+    # Sayıyı stringe çevirerek kolayca tersten okuyabilmemiz gerek
+
+    Sayi_str = str(sayi)
+
+    # Tersten okunmuş hali ile orijinal hali karşılaştırcaz
+
+    Return sayi_str == sayi_str[::-1]
+
+
+
+# Örnek kullanım
+
+Sayi1 = 525
+
+Sayi2 = 124
+
+
+
+İf palindrom_sayi_mi(sayi1):
+
+    Print(f”{sayi1} sayısı palindromdur.”)
+
+Else:
+
+    Print(f”{sayi1} sayısı palindrom değildir.”)
+
+
+
+İf palindrom_sayi_mi(sayi2):
+
+    Print(f”{sayi2} sayısı palindromdur.”)
+
+Else:
+
+    Print(f”{sayi2} sayısı palindrom değildir.”)
+
+
+
+“ 
+
+
+
+Def cift_ve_tek_topla(liste1, liste2):
+
+    Yeni_liste = []
+
+    For sayi in liste1:
+
+        İf sayi % 2 == 0:
+
+            Yeni_liste.append(sayi)
+
+    For sayi in liste2:
+
+        İf sayi % 2 != 0:
+
+            Yeni_liste.append(sayi)
+
+    Return yeni_liste
+
+
+
+List1 = [10, 11, 12]
+
+List2 = [13, 14, 15]
+
+
+
+Yeni_liste = cift_ve_tek_topla(list1, list2)
+
+Print(“Yeni liste:”, yeni_liste)
+
+
+
+“
+
+
+
+İmport random
+
+
+
+Def rastgele_sayi_sec():
+
+    Return random.randint(1, 6)
+
+
+
+Def rus_ruleti():
+
+    Rastgele_sayi = rastgele_sayi_sec()
+
+    Tahmin = int(input(“Tahmininizi girin (1-6 arası bir sayı): “))
+
+    
+
+    İf tahmin == rastgele_sayi:
+
+        Print(“Yaşadın!”)
+
+    Else:
+
+        Print(“Öldün! Rastgele sayı:”, rastgele_sayi)
+
+
+
+Rus_ruleti()
+
+
+
