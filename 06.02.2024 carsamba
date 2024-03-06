@@ -1,0 +1,27 @@
+import os
+
+dizin = os.getcwd()
+print("dizin:")
+for dosya in os.listdir(dizin):
+    print(dosya)
+
+# Yeni klasör olusturduk
+dizin_adi = "yeni_klasor"
+os.mkdir(dizin_adi)
+print(f"{dizin_adi} dizini oluşturudm")
+
+# Yeni klasörde txt olusturduk
+with open(f"{dizin_adi}/dosya.txt", "w") as dosya:
+    dosya.write("Merhaba Dünya!")
+
+# txt silşndş
+dosya_yolu = f"{dizin_adi}/dosya.txt"
+os.remove(dosya_yolu)
+print(f"{dosya_yolu} txt sıldım")
+
+# yenii diziyi silme
+os.rmdir(dizin_adi)
+print(f"{dizin_adi} diziyide sildim")
+
+#bunu ben yaptim
+
