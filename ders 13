@@ -1,6 +1,6 @@
 """
 file=open("yenidosya2.txt","w",encoding="utf-8") #buraya utf-8 kodunu ekleyerek farklı yazı tiplerini eklemeyi sağlıyoruz
-file.write("Nisanur Ağaçcıoğlu") #dosyanın içine bişeyler eklemek için bu komutu kullanıyoruz
+file.write("Ayşegül Yabacı") #dosyanın içine bişeyler eklemek için bu komutu kullanıyoruz
 #file.close()
 
 import os
