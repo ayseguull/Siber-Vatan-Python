@@ -1,0 +1,43 @@
+import requests
+from bs4 import BeautifulSoup
+
+def get_web_request(url):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            return response.text
+        else:
+            return None
+    except requests.exceptions.RequestException as e:
+        print("An error occurred:", e)
+        return None
+
+def parse_html(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    # HTML analizi yapılacak
+
+def save_output_to_file(output, filename):
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write(output)
+
+def main():
+    url = 'https://www.örneksite.com'
+    page_count = 5
+    filename = 'output.txt'
+
+    for i in range(1, page_count + 1):
+        current_url = f'{url}/page/{i}'
+        html = get_web_request(current_url)
+        if html:
+            parse_html(html)
+            print(f'{i} sayfası başarıyla işlendi')
+        else:
+            print(f'{i} sayfası başarıyla işlenemedi')
+
+    save_output_to_file("some", filename)
+
+if __name__ == "__main__":
+    main()    #benim yaptıgım
+
+
+
