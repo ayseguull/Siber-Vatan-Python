@@ -35,7 +35,7 @@ from PyQt6.QtGui import QIcon
     win.show()
     sys.exit(app.exec())
 windows()
-
+""
 import sys
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QApplication,QMainWindow
